@@ -4,7 +4,7 @@
 
 In this unit, coders will work in groups to build a project using HTML, CSS, React. Their task is to build out the front-end for a Kahoot style question game that displays a question and the possible answers, allows a user to choose answer and determine whether they are right or wrong.
 
-# A project by Daniel and Joshua
+# A project by Daniel, Andres and Joshua
 ====
 
 ## Day 1: React Components and props Daniel 
