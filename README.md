@@ -5,15 +5,16 @@
 In this unit, coders will work in groups to build a project using HTML, CSS, React. Their task is to build out the front-end for a Kahoot style question game that displays a question and the possible answers, allows a user to choose answer and determine whether they are right or wrong.
 
 # A project by Daniel, Andres and Joshua
+
 ====
 
-## Day 1: React Components and props Daniel 
+## Day 1: React Components and props Daniel
 
 ### Goal 1: Render a question from sample_data.json on the screen. Joshua !!!
 
-- [ ] In App.jsx, create a Question component.
-- [ ] Render an instance of `<Question />` inside of `<App />`.
-- [ ] Add props to `<Question />` with the text "Question goes here".
+- [x] In App.jsx, create a Question component.
+- [x] Render an instance of `<Question />` inside of `<App />`.
+- [x] Add props to `<Question />` with the text "Question goes here".
 - [ ] In `<App />`, add a variable to set the current question number to 0.
 - [ ] Replace "Question goes here" with the `question.text` field found in data for the first question.
   - [ ] HINT: Use the question number variable you just wrote.
