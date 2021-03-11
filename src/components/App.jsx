@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "../sample_data.json";
 import "../css/App.css";
 import NextQuestion from "./NewQuestion";
@@ -8,6 +8,15 @@ function App() {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [questionState, setQuestionState] = useState("unanswered");
   const [questionAnswer, setQuestionAnswer] = useState(null);
+  const [correctGuesses, setCorrectGuesses] = useState(0);
+  useEffect(() => {
+    setTimeout(function () {
+      //alert("Time ran out");
+      setQuestionNumber(0);
+      setQuestionState("unanswered");
+      setQuestionAnswer(null);
+    }, 60 * 15 * 1000);
+  }, []);
 
   let message;
 
@@ -27,7 +36,12 @@ function App() {
     <div className="app">
       <p>Trivia</p>
       <Question
-        function={(index) => setQuestionAnswer(index)}
+        function={(index) => {
+          setQuestionAnswer(index);
+          if (index === data[questionNumber].question.correct_choice_index) {
+            setCorrectGuesses(correctGuesses + 1);
+          }
+        }}
         data={data[questionNumber].question}
       />
       <NextQuestion function={() => setQuestionNumber(questionNumber + 1)} />
@@ -38,6 +52,7 @@ function App() {
       <button onClick={() => setQuestionState("isAnswered")}>
         Click for correct answer
       </button>
+      <p>The correct guesses is: {correctGuesses}</p>
     </div>
   );
 }

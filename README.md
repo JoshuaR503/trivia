@@ -87,7 +87,7 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 ## Extensions!
 
-- [ ] Make a timer that resets the game when the timer runs out.
+- [x] Make a timer that resets the game when the timer runs out.
 - [ ] Make a counter that keeps track of how many times you've guessed the correct answer.
 - [ ] Change the color of the answer buttons when the user guesses. For example turn the button with the correct answer to green.
 - [ ] Make it a two player game.
